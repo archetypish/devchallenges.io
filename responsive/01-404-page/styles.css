@@ -1,0 +1,158 @@
+/* Properties */
+:root {
+  --clr-dark-1: #333333;
+  --clr-dark-2: #4f4f4f;
+  --clr-light: #bdbdbd;
+}
+
+/* ------------------------------------- */
+/* Design Reset */
+/* ------------------------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+body,
+.root {
+  /* min-height: 100%; */
+  line-height: 1.5;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ------------------------------------- */
+/* Generic */
+/* ------------------------------------- */
+body {
+  padding: 0;
+  font-family: 'Space Mono', monospace;
+  font-weight: 400;
+  color: var(--clr-dark-1);
+}
+
+/* ------------------------------------- */
+/* Typography */
+/* ------------------------------------- */
+
+.title {
+  font-family: 'Inconsolata', monospace;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 25px;
+}
+
+.content__title {
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 71px;
+}
+
+.content__body {
+  font-size: 1.125rem;
+  color: var(--clr-dark-2);
+  line-height: 27px;
+}
+
+.content__cta {
+  font-weight: 700;
+  font-size: 0.875rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  line-height: 21px;
+
+  display: inline-block;
+  color: #fff;
+  background-color: var(--clr-dark-1);
+  padding: 1.5em 2.7em;
+}
+
+.footer__text {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: #bdbdbd;
+}
+
+.footer__text_strong {
+  font-weight: 700;
+}
+
+/* ------------------------------------- */
+/* Layout */
+/* ------------------------------------- */
+
+/* Lay things out in the right order */
+.root {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* border: 2px solid red; */
+  gap: 4em;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  /* border: 2px solid green; */
+  gap: 4em;
+}
+
+.content__image {
+  order: -2;
+}
+
+/* fixing padding/margin around the main content */
+.root > * {
+  /* border: 2px solid red; */
+}
+
+.root {
+  padding: 1.25em 1.5em 1.5em 1.5em;
+}
+
+/* fixing padding/margin inside section content */
+
+.content__text > * {
+  /* border: 2px solid red; */
+}
+
+.content__title {
+  margin-right: -0.5em;
+}
+
+/* centering image and footer */
+.content__image,
+.footer__text {
+  /* align-items: center; */
+  text-align: center;
+}
+
+.content__image {
+  padding: 0 1.25em;
+}
+
+/* spacing in the innermost flex */
+.content__text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2em;
+}
+
+.content__cta {
+  margin: 2em 0;
+}
